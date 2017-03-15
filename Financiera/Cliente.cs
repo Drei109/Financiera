@@ -6,12 +6,29 @@ using System.Threading.Tasks;
 
 namespace Financiera
 {
+    /// <summary>
+    /// Clase que representa un cliente
+    /// </summary>
     public class Cliente
     {
-        public int CodigoCliente { get; set; }
-        public string NombreCliente { get; set; }
-        public DateTime FechaNacimiento { get; set; }
+        #region Propiedades
+        public int CodigoCliente { get; private set; }
+        public string NombreCliente { get; private set; }
+        public DateTime FechaNacimiento { get; private set; }
+        #endregion
 
+        #region Constructor
+
+        /// <summary>
+        /// Prevents a default instance of the <see cref="Cliente"/> class from being created.
+        /// </summary>
+        private Cliente()
+        {
+
+        }
+        #endregion
+
+        #region Métodos
         public static Cliente Crear(int ai_cod_cliente, string as_nom_cliente, DateTime adt_fec_nacimiento)
         {
             return new Cliente()
@@ -26,5 +43,6 @@ namespace Financiera
         {
             NombreCliente = as_nuevo_nombre;            
         }
+        #endregion
     }
 }
