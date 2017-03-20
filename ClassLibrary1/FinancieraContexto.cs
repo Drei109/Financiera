@@ -23,8 +23,8 @@ namespace ClassLibrary1
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Configurations.Add(new ClienteMapeo);
-            modelBuilder.Configurations.Add(new CuentaAhorrosMapeo);
+            modelBuilder.Configurations.Add(new ClienteMapeo());
+            modelBuilder.Configurations.Add(new CuentaAhorrosMapeo());
         }
     }
 }
