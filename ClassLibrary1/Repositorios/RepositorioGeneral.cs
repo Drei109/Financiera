@@ -32,6 +32,7 @@ namespace ClassLibrary1.Repositorios
             if (ao_llaves == null)
                 return io_contexto.Set<T>().ToList();
             else
+
                 return io_contexto.Set<T>().Where(ao_llaves).ToList();
         }
     }
